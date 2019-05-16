@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	string name;
+	string subj[5];
+	int marks[5];
+	
+	int sum = 0;
+	
+	double avg = 0.0;
+	char grade;
+	
+	cout << "======================================\nWelcome to My School Grading System\n======================================\n\n";
+	
+	cout << "Type Ur Name: ";
+	cin >> name;
+	
+	for(int a=0; a<5; a++)
+	{
+		cout << endl << "Enter name for subject "<<(a+1) << ": ";
+		cin >> subj[a];
+		
+		cout << "Enter marks for " << subj[a] << ": ";
+		cin >> marks[a];
+		
+		sum += marks[a];
+	}
+	
+	avg = sum/5;
+	
+	cout << endl << "The average of your mark is: " << avg << endl;
+	/*=====================================*/
+	
+	if(avg>=85)
+	{
+		grade = 'A';
+	}
+	else if(avg>=70)
+	{
+		grade = 'B';
+	}
+	else if(avg>=50)
+	{
+		grade = 'C';
+	}
+	else if(avg>=25)
+	{
+		grade = 'D';
+	}
+	else /*if(avg>=70)*/
+	{
+		grade = 'W';
+	}
+	
+	cout <<endl<< "Hi " << name << ", you have obtained the grade: " << grade << endl;
+	
+	return 0;
+}
+
